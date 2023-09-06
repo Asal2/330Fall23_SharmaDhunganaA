@@ -33,3 +33,11 @@ enum class Color(val rgb: Int){
 enum class Direction(val degrees: Int) {
     NORTH(0), SOUTH(180), EAST(90), WEST(270)
 }
+
+class Choice{
+    companion object{
+        var name: String = "lyric"
+        fun showDescription(name:String) = println("My favorite $name")
+    }
+}
+

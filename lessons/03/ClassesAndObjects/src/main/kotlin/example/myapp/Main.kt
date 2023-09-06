@@ -1,5 +1,6 @@
 package example.myapp
 
+import example.myapp.decor.Choice
 import example.myapp.decor.Direction
 import example.myapp.decor.makeDecorations
 import example.myapp.example.myapp.Aquarium
@@ -43,7 +44,11 @@ fun main(){
 //    makeFish()
 //    makeDecorations()
 
-    println(Direction.EAST.name)
-    println(Direction.EAST.ordinal)
-    println(Direction.EAST.degrees)
+//    println(Direction.EAST.name)
+//    println(Direction.EAST.ordinal)
+//    println(Direction.EAST.degrees)
+
+    println(Choice.name)
+    Choice.showDescription("pick")
+    Choice.showDescription("selection")
 }
