@@ -1,5 +1,6 @@
 package example.myapp
 
+import example.myapp.decor.makeDecorations
 import example.myapp.example.myapp.Aquarium
 import example.myapp.example.myapp.TowerTank
 
@@ -38,5 +39,6 @@ fun makeFish() {
 
 fun main(){
 //    buildAquarium()
-    makeFish()
+//    makeFish()
+    makeDecorations()
 }
