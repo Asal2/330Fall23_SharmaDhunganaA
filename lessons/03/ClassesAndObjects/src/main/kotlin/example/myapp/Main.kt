@@ -1,5 +1,6 @@
 package example.myapp
 
+import example.myapp.decor.Direction
 import example.myapp.decor.makeDecorations
 import example.myapp.example.myapp.Aquarium
 import example.myapp.example.myapp.TowerTank
@@ -40,5 +41,9 @@ fun makeFish() {
 fun main(){
 //    buildAquarium()
 //    makeFish()
-    makeDecorations()
+//    makeDecorations()
+
+    println(Direction.EAST.name)
+    println(Direction.EAST.ordinal)
+    println(Direction.EAST.degrees)
 }
