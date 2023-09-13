@@ -7,11 +7,11 @@ fun main(){
     mulchOrder2.addPlantingBedDimensions(PlantingBedDimensions(43,14, 4))
     mulchOrder2.mulchPricer = cubicFootPricer
 
-//    val cubicYardPricer = CubicYardMulchPricer()
-//    val mulchOrder3 = MulchOrder(PlantingBedDimensions(20,15,40))
-//    mulchOrder3.addPlantingBedDimensions(PlantingBedDimensions(20, 15, 40))
-//    mulchOrder2.addPlantingBedDimensions((PlantingBedDimensions(55, 20, 32)))
-//    mulchOrder3.mulchPricer = cubicYardPricer
+    val cubicYardPricer = CubicYardMulchPricer()
+    val mulchOrder3 = MulchOrder(PlantingBedDimensions(20,15,40))
+    mulchOrder3.addPlantingBedDimensions(PlantingBedDimensions(20, 15, 40))
+    mulchOrder3.addPlantingBedDimensions((PlantingBedDimensions(55, 20, 32)))
+    mulchOrder3.mulchPricer = cubicYardPricer
 
 
 
@@ -19,5 +19,5 @@ fun main(){
 
     println()
 
-//    mulchOrder3.printOrderDetails()
+    mulchOrder3.printOrderDetails()
 }
