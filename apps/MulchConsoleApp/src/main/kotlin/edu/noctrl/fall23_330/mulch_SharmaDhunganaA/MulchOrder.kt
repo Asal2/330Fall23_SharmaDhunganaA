@@ -17,9 +17,7 @@ class MulchOrder( plantingBedDimensionsList: PlantingBedDimensions) {
     fun getTotalCubicYards(): Int {
         return ceil(plantingBedDimensionsAList.sumOf { (it.length * it.width * (it.depth / 12.0))/27 }).toInt()
     }
-//    fun getTotalCubicYards(): Int {
-//        return ceil(plantingBedDimensionsAList.sumOf { (it.length * it.width * it.depth)/300}.toDouble()).toInt()
-//    }
+
 
     fun getTotalCubicFeet(): Int {
         return ceil((getTotalCubicYards() * 27).toDouble()).toInt()
