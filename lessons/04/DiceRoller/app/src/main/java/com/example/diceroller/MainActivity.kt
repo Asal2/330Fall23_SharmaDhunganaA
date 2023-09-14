@@ -36,9 +36,6 @@ class MainActivity : AppCompatActivity() {
 
         val diceImage2: ImageView = findViewById(R.id.imageView2)
 
-        // Determine which drawable resource ID to use based on the dice roll
-
-
         // Update the ImageView with the correct drawable resource ID
         diceImage.setImageResource(getDrawableResource(diceRoll))
         diceImage2.setImageResource(getDrawableResource(diceRoll2))
@@ -51,6 +48,7 @@ class MainActivity : AppCompatActivity() {
 
     // this function take the diceRoll value and returns the different value for each dice objects to above repetition
     private fun getDrawableResource(diceRoll:Int): Int {
+        // Determine which drawable resource ID to use based on the dice roll and returns it
         return when (diceRoll){
             1 -> R.drawable.dice_1
             2 -> R.drawable.dice_2
