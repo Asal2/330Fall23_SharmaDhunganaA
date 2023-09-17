@@ -7,6 +7,9 @@ android {
     namespace = "com.example.tiptime"
     compileSdk = 33
 
+    buildFeatures {
+        viewBinding = true
+    }
     defaultConfig {
         applicationId = "com.example.tiptime"
         minSdk = 24
@@ -33,6 +36,7 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
 }
 
 dependencies {
