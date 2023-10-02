@@ -32,44 +32,58 @@
         app:layout_constraintTop_toBottomOf="@+id/Mulch_type"
         app:layout_constraintVertical_bias="0.0" />
 
-    <EditText
-        android:id="@+id/number_cubicyard"
-        android:layout_width="87dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="144dp"
-        android:gravity="center"
-        android:hint="0"
-        android:inputType="numberDecimal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/plusbutton"
-        android:layout_width="54dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="20dp"
-        android:text="+"
-        android:textSize="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.011"
-        app:layout_constraintStart_toEndOf="@+id/number_cubicyard"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.21" />
-
-    <Button
-        android:id="@+id/minusbutton"
-        android:layout_width="54dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="144dp"
-        android:layout_marginEnd="20dp"
-        android:text="-"
-        android:textSize="10dp"
-        app:layout_constraintEnd_toStartOf="@+id/number_cubicyard"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/cubic_count">
+
+        <Button
+            android:id="@+id/minusbutton"
+            android:layout_width="54dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="20dp"
+            android:text="-"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.011"
+            app:layout_constraintStart_toEndOf="@+id/number_cubicyard"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.21" />
+
+        <EditText
+            android:id="@+id/number_cubicyard"
+            android:layout_width="87dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:hint="0"
+            android:inputType="numberDecimal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/plusbutton"
+            android:layout_width="54dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="20dp"
+            android:text="+"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.011"
+            app:layout_constraintStart_toEndOf="@+id/number_cubicyard"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.21" />
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/delivery_Address"
