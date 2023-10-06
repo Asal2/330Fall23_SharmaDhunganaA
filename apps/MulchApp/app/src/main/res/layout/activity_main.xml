@@ -10,8 +10,8 @@
         android:id="@+id/Mulch_type"
         android:layout_width="408dp"
         android:layout_height="40dp"
-        android:text="Select Mulch Type"
-        android:textSize="25dp"
+        android:text="@string/select_mulch_type"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.018"
@@ -21,10 +21,11 @@
 
     <RadioGroup
         android:id="@+id/Mulch_option"
-        android:layout_width="405dp"
-        android:layout_height="373dp"
+        android:layout_width="404dp"
+        android:layout_height="576dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="48dp"
+        android:checkedButton="@id/option_Premium"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -33,58 +34,125 @@
             android:id="@+id/option_Premium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Premium Bark Mulch" />
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/premium_dark_mulch" />
+
+        <TextView
+            android:id="@+id/premiumPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/option_Premium"
+            android:text="$56/cubic yard" />
 
         <RadioButton
             android:id="@+id/option_Special"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Special Blend" />
+            android:text="@string/special_blend" />
+
+        <TextView
+            android:id="@+id/SpecialPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/option_Special"
+            android:text="$35/cubic yard" />
 
         <RadioButton
             android:id="@+id/option_Triple"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Triple Ground" />
+            android:text="@string/triple_ground" />
+
+        <TextView
+            android:id="@+id/triplePrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/triplePrice"
+            android:text="$40/cubic yard" />
 
         <RadioButton
+
             android:id="@+id/option_Chocolate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Chocolate Dyed" />
+            android:text="@string/chocolate_dyed" />
+
+        <TextView
+            android:id="@+id/chocolatePrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/option_Chocolate"
+            android:text="$56/cubic yard" />
 
         <RadioButton
             android:id="@+id/option_Red"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Red Dyed" />
+            android:text="@string/red_dyed" />
+
+        <TextView
+            android:id="@+id/redPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/option_Red"
+            android:text="$38/cubic yard" />
 
         <RadioButton
             android:id="@+id/option_Black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Black Dyed" />
+            android:text="@string/black_dyed" />
+
+        <TextView
+            android:id="@+id/blackPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/option_Black"
+            android:text="$38/cubic yard"
+            />
 
         <RadioButton
             android:id="@+id/option_Play"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Play Mat" />
+            android:text="@string/play_mat" />
+
+        <TextView
+            android:id="@+id/playPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/option_Play"
+            android:text="$38/cubic yard" />
 
         <RadioButton
             android:id="@+id/option_Cedar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Cedar" />
+            android:text="@string/cedar" />
+
+        <TextView
+            android:id="@+id/cedarPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/option_Cedar"
+            android:text="$38/cubic yard" />
 
     </RadioGroup>
 
     <Button
-        android:id="@+id/supabutton"
+        android:id="@+id/nextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="304dp"
-        android:text="Next"
+        android:text="@string/next"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Mulch_option" />
 

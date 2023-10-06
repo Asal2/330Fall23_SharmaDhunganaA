@@ -7,6 +7,10 @@ android {
     namespace = "com.example.mulchapp"
     compileSdk = 33
 
+    buildFeatures {
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId = "com.example.mulchapp"
         minSdk = 24

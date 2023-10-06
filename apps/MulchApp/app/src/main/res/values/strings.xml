@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">MulchApp</string>
+    <string name="select_mulch_type">Select Mulch Type</string>
+    <string name="premium_dark_mulch">Premium Dark Mulch</string>
+    <string name="special_blend">Special Blend</string>
+    <string name="triple_ground">Triple Ground</string>
+    <string name="chocolate_dyed">Chocolate Dyed</string>
+    <string name="red_dyed">Red Dyed</string>
+    <string name="black_dyed">Black Dyed</string>
+    <string name="play_mat">Play Mat</string>
+    <string name="cedar">Cedar</string>
+    <string name="next">Next</string>
+    <string name="default_text">Default text</string>
+    <string name="delivery_address">Delivery Address</string>
+    <string name="mulch_cost">Mulch Cost:</string>
+    <string name="sales_tax">Sales tax:</string>
+    <string name="delivery_charge">Delivery Charge:</string>
+    <string name="total">Total:</string>
 </resources>
