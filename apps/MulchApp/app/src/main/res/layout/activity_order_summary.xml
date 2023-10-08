@@ -9,27 +9,43 @@
     <TextView
         android:id="@+id/mulchOrder"
         android:layout_width="match_parent"
-        android:layout_height="118dp"
+        android:layout_height="50dp"
+        android:gravity="center"
         android:text="TextView"
+        android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pricepermulch"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="TextView"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mulchOrder"/>
 
     <TextView
         android:id="@+id/orderSummary"
         android:layout_width="match_parent"
         android:layout_height="59dp"
         android:text="Order Summary"
+        android:gravity="center"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mulchOrder" />
+        app:layout_constraintTop_toBottomOf="@+id/pricepermulch" />
 
     <TextView
         android:id="@+id/orderDetail"
         android:layout_width="match_parent"
-        android:layout_height="36dp"
+        android:layout_height="50dp"
+        android:gravity="center"
         android:text="TextView"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/orderSummary" />
@@ -37,40 +53,45 @@
     <TextView
         android:id="@+id/streetDetail"
         android:layout_width="match_parent"
-        android:layout_height="36dp"
+        android:layout_height="50dp"
         android:text="TextView"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/orderDetail" />
     <TextView
         android:id="@+id/cityState"
         android:layout_width="match_parent"
-        android:layout_height="36dp"
+        android:layout_height="50dp"
         android:text="TextView"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/streetDetail" />
     <TextView
         android:id="@+id/zipDetail"
         android:layout_width="match_parent"
-        android:layout_height="36dp"
+        android:layout_height="50dp"
         android:text="TextView"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cityState" />
     <TextView
         android:id="@+id/emailDetail"
         android:layout_width="match_parent"
-        android:layout_height="36dp"
+        android:layout_height="50dp"
         android:text="TextView"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/zipDetail" />
     <TextView
         android:id="@+id/phoneDetail"
         android:layout_width="match_parent"
-        android:layout_height="36dp"
+        android:layout_height="50dp"
         android:text="TextView"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailDetail" />
@@ -78,7 +99,7 @@
     <TextView
         android:id="@+id/Cost"
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="30dp"
         android:layout_marginTop="48dp"
         android:gravity="center"
         android:text="@string/mulch_cost"
@@ -88,7 +109,7 @@
     <TextView
         android:id="@+id/sales"
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="30dp"
         android:gravity="center"
         android:text="@string/sales_tax"
         app:layout_constraintEnd_toEndOf="parent"
@@ -98,7 +119,7 @@
     <TextView
         android:id="@+id/delivey"
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="30dp"
         android:gravity="center"
         android:text="@string/delivery_charge"
         app:layout_constraintEnd_toEndOf="parent"
@@ -108,7 +129,7 @@
     <TextView
         android:id="@+id/total"
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="30dp"
         android:gravity="center"
         android:text="@string/total"
         app:layout_constraintEnd_toEndOf="parent"
@@ -120,7 +141,7 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="13dp"
         android:text="Place Order"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.944"

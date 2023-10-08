@@ -11,6 +11,7 @@ import com.example.mulchapp.databinding.ActivityOrderMulchBinding
 import android.util.Log
 class OrderMulchActivity : AppCompatActivity() {
     lateinit var binding: ActivityOrderMulchBinding
+
     
     private val mulchTypeList = mutableMapOf<String,Int>(
         "Premium Dark Mulch" to 56,
@@ -27,7 +28,6 @@ class OrderMulchActivity : AppCompatActivity() {
     private var salesTax: Double = 0.07;
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        print("App stating")
         super.onCreate(savedInstanceState)
         binding = ActivityOrderMulchBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -46,6 +46,79 @@ class OrderMulchActivity : AppCompatActivity() {
 
         binding.calculateBtn.setOnClickListener{
             calculateTotal()
+
+            val intent = Intent(this, OrderSummaryActivity::class.java)
+
+
+            var selectMulch = binding.mulchType
+            var selectcubicyard = binding.numberCubicyard
+            var takestring  = selectMulch.text.toString()
+            var takecubicyard = selectcubicyard.text.toString()
+            var addtypePrice = "$takestring - $takecubicyard cubic yards"
+            intent.putExtra("KeyName", addtypePrice);
+
+
+            var selectMulchOption = binding.mulchCostOption
+            var takestringA  = selectMulchOption.text.toString()
+            intent.putExtra("KeyName0", takestringA);
+
+            var selectcubicYard = binding.numberCubicyard
+            var selectMulchType = binding.mulchType
+            var takestringB  = selectcubicYard.text.toString()
+            var taketype = selectMulchType.text.toString()
+            var adddelivery = "Delivering $takestringB cubic yard of $taketype to: "
+            intent.putExtra("KeyName1", adddelivery);
+
+            var selectStreet = binding.Street
+            var takestringC  = selectStreet.text.toString()
+            intent.putExtra("KeyName2", takestringC);
+
+            var selectCity = binding.City
+            val selectState = binding.State
+            var takestringD  = selectCity.text.toString()
+            var takestate = selectState.text.toString()
+            var addtext = "$takestringD, $takestate"
+            intent.putExtra("KeyName3", addtext);
+
+
+            var selectZip = binding.zipCode
+            var takestringE  = selectZip.text.toString()
+            intent.putExtra("KeyName4", takestringE);
+
+
+            var selectEmail = binding.email
+            var takestringF  = selectEmail.text.toString()
+            intent.putExtra("KeyName5", takestringF);
+
+
+            var selectPhone = binding.phone
+            var takestringG  = selectPhone.text.toString()
+            intent.putExtra("KeyName6", takestringG);
+
+
+            var selectCost = binding.Cost
+            var takestringH  = selectCost.text.toString()
+            intent.putExtra("KeyName7", takestringH);
+
+
+            var selectSale = binding.sales
+            var takestringI  = selectSale.text.toString()
+            intent.putExtra("KeyName8", takestringI);
+
+
+            var selectDelivery = binding.delivery
+            var takestringJ  = selectDelivery.text.toString()
+            intent.putExtra("KeyName9", takestringJ);
+
+
+            var selectToal = binding.total
+            var takestringK  = selectToal.text.toString()
+            intent.putExtra("KeyName10", takestringK);
+
+
+
+
+            startActivity(intent)
         }
     }
     private fun calculateTotal(){
