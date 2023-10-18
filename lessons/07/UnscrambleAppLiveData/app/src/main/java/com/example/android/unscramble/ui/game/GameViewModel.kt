@@ -25,6 +25,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 
+//changes already taken place
 /**
  * ViewModel containing the app data and methods to process the data
  */
