@@ -9,6 +9,7 @@ import com.bignerdranch.android.geoquiz.databinding.ActivityCheatBinding
 const val EXTRA_ANSWER_KEY = "com.bignerdranch.android.geoquiz.answer_key"
 const val EXTRA_ANSWER_SHOWN = "com.bignerdranch.android.geoquiz.answer_shown"
 // comment added to make first commit
+//comment added to make commit
 class CheatActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCheatBinding
     private var answer = false
