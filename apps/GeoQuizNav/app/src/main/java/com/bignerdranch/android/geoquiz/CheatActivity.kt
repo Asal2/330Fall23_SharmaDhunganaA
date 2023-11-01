@@ -8,8 +8,7 @@ import com.bignerdranch.android.geoquiz.databinding.ActivityCheatBinding
 
 const val EXTRA_ANSWER_KEY = "com.bignerdranch.android.geoquiz.answer_key"
 const val EXTRA_ANSWER_SHOWN = "com.bignerdranch.android.geoquiz.answer_shown"
-// comment added to make first commit
-//comment added to make commit
+
 class CheatActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCheatBinding
     private var answer = false
@@ -17,7 +16,7 @@ class CheatActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityCheatBinding.inflate(layoutInflater)
+            binding = ActivityCheatBinding.inflate(layoutInflater)
         setContentView(binding.root)
         answer = intent.getBooleanExtra(EXTRA_ANSWER_KEY, false)
         binding.showAnswerButton.setOnClickListener {
@@ -32,4 +31,16 @@ class CheatActivity : AppCompatActivity() {
             setResult(Activity.RESULT_OK, intentData)
         }
     }
+
+    companion object {
+        val EXTRA_ANSWER_KEY: String?
+            get() {
+                TODO()
+            }
+        val EXTRA_ANSWER_SHOWN: String?
+            get() {
+                TODO()
+            }
+    }
+
 }

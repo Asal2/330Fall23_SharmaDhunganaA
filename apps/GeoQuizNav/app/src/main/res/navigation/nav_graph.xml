@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    tools:ignore="ExtraText"
+    app:startDestination="@id/question2Fragment">
+    <fragment
+        android:id="@+id/question2Fragment"
+        android:name="com.bignerdranch.android.geoquiz.Question2Fragment"
+        android:label="fragment_question2"
+        tools:layout="@layout/fragment_question2" >
+        <action
+            android:id="@+id/action_question2Fragment_to_cheatFragment"
+            app:destination="@id/cheatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cheatFragment"
+        android:name="com.bignerdranch.android.geoquiz.CheatFragment"
+        android:label="fragment_cheat"
+        tools:layout="@layout/fragment_cheat" >
+        <argument
+            android:name="correct_answer"
+            app:argType="boolean" />
+    </fragment>
+</navigation>
