@@ -34,7 +34,6 @@ abstract class WordDatabase: RoomDatabase() {
                     .fallbackToDestructiveMigration()
                     .addCallback(DictionaryDatabaseCallback(scope))
                     .build()
-                Log.d("TAG", "Your log message")
                 INSTANCE = instance
                 // return instance
                 instance
@@ -61,8 +60,8 @@ abstract class WordDatabase: RoomDatabase() {
 
             wordDao.deleteAll()
 
-            var word = Word("bread", "bread short def",
-                3, "", false)
+            var word = Word("Egg", "food, protien",
+                2, "", false)
             wordDao.insert(word)
         }
     }

@@ -41,29 +41,21 @@ class DictionaryViewViewModel: ViewModel() {
             try {
                 val response = DictionaryApi.retrofitService.getWord(searchWord)
                 val jsonString = response.body().toString()
-//                var searchedWords = mutableListOf<String>()
                 if (jsonString.startsWith("[{")) {
-                    // call your parseJsonToWord function
-//                    searchedWords.add(parseJsonToWord(searchWord, jsonString).id)
                     _word.value = parseJsonToWord(searchWord, jsonString)
                     _words.value = listOf(word.value?.id.toString())
 
-                } //else if (jsonString.startsWith("[\"")) {
+                }
                 else if (jsonString.startsWith("[")){
-                    Log.d("ViewViewModel", jsonString.toString())
                     var parsedWords = parseJsonStringToListOfWords(jsonString)
                     if (parsedWords.isEmpty()) {
                         parsedWords = parsedWords.toMutableList()
                         parsedWords.add("No matching words found!")
                     } else if (jsonString.startsWith("[]")) {
-                        Log.d("ViewViewModel","no matching word")
                         parsedWords = listOf("No matching words found!")
                     }
                     _words.value = parsedWords
-                    Log.d("ViewViewModel words",words.value.toString())
-//                    for (i in parsedWords.indices) {
-//                        searchedWords.add(i, parsedWords[i])
-//                    }
+
                 }
                 _apiStatus.value = DictionaryApiStatus.DONE
             } catch (e: Exception) {
