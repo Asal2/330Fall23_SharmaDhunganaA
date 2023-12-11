@@ -109,48 +109,6 @@
             </LinearLayout>
         </ScrollView>
 
-<!--        <ScrollView-->
-<!--            android:layout_width="300dp"-->
-<!--            android:layout_height="0dp"-->
-<!--            android:fillViewport="true"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/rectangle_definition"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="0.495"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="@id/rectangle_definition"-->
-<!--            app:layout_constraintVertical_bias="1.0">-->
-
-<!--            <LinearLayout-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:orientation="vertical">-->
-
-<!--                <ImageView-->
-<!--                    android:id="@+id/image_add"-->
-<!--                    android:layout_width="300dp"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginTop="30dp"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toBottomOf="@id/word" />-->
-
-<!--                <TextView-->
-<!--                    android:id="@+id/word_defni"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="100dp"-->
-<!--                    android:gravity="center"-->
-<!--                    android:maxHeight="309dp"-->
-<!--                    android:scrollbars="vertical"-->
-<!--                    android:textColor="@color/black"-->
-<!--                    android:textSize="20sp"-->
-<!--                    app:layout_constraintTop_toTopOf="@+id/rectangle_definition"-->
-<!--                    tools:layout_editor_absoluteX="0dp"-->
-<!--                    tools:text="this is the sample" />-->
-
-<!--            </LinearLayout>-->
-
-<!--        </ScrollView>-->
-
         <Switch
             android:id="@+id/activation_switch"
             android:layout_width="wrap_content"
@@ -164,19 +122,6 @@
 
 
 
-        <!--        <TextView-->
-        <!--            android:id="@+id/word_defni"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_marginTop="12dp"-->
-        <!--            android:gravity="center"-->
-        <!--            android:maxHeight="340dp"-->
-        <!--            android:scrollbars="vertical"-->
-        <!--            android:textColor="@color/black"-->
-        <!--            android:textSize="20sp"-->
-        <!--            app:layout_constraintTop_toBottomOf="@+id/rectangle_definition"-->
-        <!--            tools:layout_editor_absoluteX="0dp"-->
-        <!--            tools:text="this is the sample" />-->
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
