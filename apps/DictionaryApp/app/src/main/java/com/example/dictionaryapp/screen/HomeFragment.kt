@@ -41,9 +41,6 @@ class HomeFragment : Fragment() {
             viewModel = sharedViewModel
             wordsdic.layoutManager = LinearLayoutManager(requireContext())
         }
-
-
-
         return binding.root
     }
 
@@ -58,29 +55,14 @@ class HomeFragment : Fragment() {
         })
         binding.wordsdic.adapter = adapter
 
-
         wordViewModel.allWords.observe(viewLifecycleOwner) { words ->
-            Log.d("Tag", "Number of words: ${words.size}")
             words.let { adapter.submitList(it) }
         }
     }
 
     fun goToSearchWord(){
         findNavController().navigate(R.id.action_dictionaryHomeFragment_to_SearchFragment)
-
     }
-
-    fun showActiveWords(){
-
-    }
-    fun showInactiveWords(){
-
-    }
-
-    fun showAllWords(){
-
-    }
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

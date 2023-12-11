@@ -1,17 +1,17 @@
 package com.example.dictionaryapp.screen
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import coil.load
+import android.os.Bundle
 import com.example.dictionaryapp.DictionaryApp
 import com.example.dictionaryapp.databinding.FragmentActivateDefinitionBinding
 import com.example.dictionaryapp.viewmodel.DictionaryViewModel
 import com.example.dictionaryapp.viewmodel.DictionaryViewModelFactory
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import com.example.dictionaryapp.viewmodel.DictionaryViewViewModel
 
 
@@ -26,8 +26,6 @@ class ActivateDefinitionFragment : Fragment() {
         DictionaryViewModelFactory((requireActivity().application as DictionaryApp).repository)
     }
 
-
-    // Use the 'by activityViewModels()' Kotlin property delegate from the fragment-ktx artifact
     private val sharedViewModel: DictionaryViewViewModel by activityViewModels()
 
     override fun onCreateView(
@@ -51,7 +49,7 @@ class ActivateDefinitionFragment : Fragment() {
 
             binding.word.text = word.id
             binding.wordDefni.text = word.shortdefs
-            binding.image.load("${sharedViewModel.getURL()}${word.imageFileName}.gif")
+            binding.imageAdd.load("${sharedViewModel.getURL()}${word.imageFileName}.gif")
         }
 
         binding.activationSwitch.setOnCheckedChangeListener{ buttonView, isChecked ->

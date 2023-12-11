@@ -1,10 +1,10 @@
 package com.example.dictionaryapp.adapter
 
-import android.view.LayoutInflater
-import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import android.view.LayoutInflater
+import android.view.ViewGroup
 import com.example.dictionaryapp.databinding.SearchLayoutBinding
 
 class SearchAdapter(val clickListener: WordListener) :

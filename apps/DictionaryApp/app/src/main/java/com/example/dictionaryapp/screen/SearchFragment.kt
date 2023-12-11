@@ -1,19 +1,18 @@
 package com.example.dictionaryapp.screen
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.dictionaryapp.adapter.SearchAdapter
+import com.example.dictionaryapp.adapter.WordListener
+import com.example.dictionaryapp.databinding.FragmentSearchBinding
+import com.example.dictionaryapp.viewmodel.DictionaryViewViewModel
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.dictionaryapp.R
-import com.example.dictionaryapp.adapter.SearchAdapter
-import com.example.dictionaryapp.adapter.WordListener
-import com.example.dictionaryapp.databinding.FragmentSearchBinding
-import com.example.dictionaryapp.viewmodel.DictionaryViewViewModel
 
 
 class SearchFragment : Fragment() {
@@ -25,10 +24,8 @@ class SearchFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        Log.d("WordSearch","before inflate")
         _binding = FragmentSearchBinding.inflate(inflater, container, false)
 
-        Log.d("WordSearch","after inflate")
         binding?.apply {
             lifecycleOwner = viewLifecycleOwner
             viewModel = viewModel
@@ -43,13 +40,10 @@ class SearchFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        Log.d("Tag", "HERE")
         binding?.wordSearchFragment = this
         val adapter = SearchAdapter(WordListener { word ->
             viewModel.onWordClicked(word)
-            // Navigate to the next destination to add a word
             findNavController().navigate(R.id.action_wordSearchFragment_to_addWordFragment)
-            Log.d("WordSearch", "after findNav")
         })
         binding.recyclerView.adapter = adapter
         binding.searchWordButton.setOnClickListener{

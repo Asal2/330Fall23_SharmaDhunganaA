@@ -45,13 +45,12 @@ class AddWordFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         sharedviewModel.word.observe(viewLifecycleOwner) { word ->
-            //observer for word exact match
-            binding.foundWordTextView.text = word.id
-            binding.wordDefinitionAdd.text = word.shortdefs
+            binding.wordfound.text = word.id
+            binding.worddefs.text = word.shortdefs
             binding.imageAdd.load("${sharedviewModel.getURL()}${word.imageFileName}.gif")
         }
 
-        binding.addButton.setOnClickListener{
+        binding.addBtn.setOnClickListener{
             addWordToDatabase()
         }
     }
@@ -59,7 +58,6 @@ class AddWordFragment : Fragment() {
     fun addWordToDatabase() {
 
         wordViewModel.insertWord(sharedviewModel.getWord())
-        // Navigate back to the [StartFragment] to start over
         findNavController().navigate(R.id.action_addWordFragment_to_HomeFragment)
     }
 

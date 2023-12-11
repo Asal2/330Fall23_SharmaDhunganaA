@@ -1,11 +1,11 @@
 package com.example.dictionaryapp.adapter
 
-import android.view.LayoutInflater
-import android.view.ViewGroup
-import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dictionaryapp.database.Word
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
 import com.example.dictionaryapp.databinding.HomeLayoutBinding
 
 
