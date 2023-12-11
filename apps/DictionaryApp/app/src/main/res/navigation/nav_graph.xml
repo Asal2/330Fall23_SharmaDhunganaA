@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/HomeFragment">
+
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="com.example.dictionaryapp.screen.HomeFragment"
+        android:label="Home" >
+        <action
+            android:id="@+id/action_dictionaryHomeFragment_to_SearchFragment"
+            app:destination="@id/SearchFragment" />
+        <action
+            android:id="@+id/action_dictionaryHomeFragment_to_wordDefinitionFragment"
+            app:destination="@id/activeDefinitionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SearchFragment"
+        android:name="com.example.dictionaryapp.screen.SearchFragment"
+        android:label="Search Word" >
+        <action
+            android:id="@+id/action_wordSearchFragment_to_addWordFragment"
+            app:destination="@id/addWordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addWordFragment"
+        android:name="com.example.dictionaryapp.screen.AddWordFragment"
+        android:label="Add Word"
+        tools:layout="@layout/fragment_add_word" >
+        <action
+            android:id="@+id/action_addWordFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/activeDefinitionFragment"
+        android:name="com.example.dictionaryapp.screen.ActivateDefinitionFragment"
+        android:label="Word Definition"
+        tools:layout="@layout/fragment_activate_definition" />
+</navigation>
